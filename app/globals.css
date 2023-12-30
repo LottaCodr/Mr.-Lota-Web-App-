@@ -8,3 +8,43 @@ body {
     text-primary
     
 }
+
+.typing-text {
+    
+    overflow: hidden;
+    border-right: 4px solid #000;
+    white-space: nowrap;
+    margin: 0;
+    animation: typing 4s steps(20, end);
+
+}
+
+.cursor-animation {
+    display: inline-block;
+    vertical-align: textbottom;
+    width: 0.5em;
+    height: 1.2em;
+    background-color: #000;
+    animation: blink 1s step-end infinite;
+}
+
+.animate-blink {
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+    
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+    
+}

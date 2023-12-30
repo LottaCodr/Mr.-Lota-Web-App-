@@ -10,9 +10,9 @@ export default function Home({
   testimonialData,
 }) {
   return (
-    <>
-      <TheHome></TheHome>
-    </>
+    <main>
+      <TheHome/>
+    </main>
   );
 }
 

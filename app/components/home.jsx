@@ -1,14 +1,21 @@
-import React from 'react'
+"use client";
+
+import React, { useState, useEffect } from "react";
+import Hero from "./Hero";
+import About from "./About";
 
 export default function TheHome() {
   return (
-    <div className='py-40 justify-center w-full h-20 px-8 '>
-<h2> Hey, I am Mr. Lota</h2>
-<small>Expert in Software Development</small>
+    <main className="h-screen snap-y snap-mandatory overflow-scroll z-0">
+      {/* Hero Section */}
+      <section id="hero" className="snap-center">
+        <Hero />
+      </section>
 
-
-<p className='text-2x1'>I help startups design & develop outstanding web and mobile products.</p>
-
-    </div>
-  )
+      {/* about section */}
+      <section id="about" className="snap-center">
+        <About />
+      </section>
+    </main>
+  );
 }
