@@ -14,11 +14,11 @@ export default function Navbar() {
     { id: 3, link: "services" },
     { id: 4, link: "projects" },
     { id: 5, link: "testimonials" },
-    { id: 6, link: "contact" },
+   
   ];
 
   return (
-    <div className="flex justify-between items-center w-full h-20 px-4 text-primary bg-white fixed nav">
+    <div className="flex justify-between items-center w-full h-20 px-12 text-primary bg-white fixed nav">
       <div>
         <h1 className="text-5xl font-signature ml-2">
           <a

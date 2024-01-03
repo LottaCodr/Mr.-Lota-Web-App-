@@ -1,7 +1,10 @@
-import connectToDatabase from "mongodb";
-import Navbar from "./components/navbar";
+
+"use client";
 import React from "react";
-import TheHome from "./components/home";
+import Navbar from "./components/navbar";
+import Hero from "./components/Hero";
+import About from "./components/About";
+import Services from "./components/Services";
 
 export default function Home({
   aboutMeData,
@@ -10,9 +13,23 @@ export default function Home({
   testimonialData,
 }) {
   return (
-    <main>
-      <TheHome/>
+      <main className="h-screen w-screen snap-y snap-mandatory overflow-scroll z-0">
+      {/* Hero Section */}
+      <section id="hero" className="snap-center">
+        <Hero />
+      </section>
+
+      {/* about section */}
+      <section id="about" className="snap-center">
+        <About />
+      </section>
+
+      {/* services section */}
+      <section id="services" className="snap-center">
+        <Services/>
+      </section>
     </main>
+    
   );
 }
 

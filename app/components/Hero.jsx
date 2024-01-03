@@ -8,14 +8,14 @@ export default function Hero() {
 
     const [text, count] = useTypewriter({
         words: [
-          "Software Development",
-          "Web Development",
-          "Brand Identity Designing",
-          "UI/UX Designing",
-          "Mobile App Development",
+          "Software Developer",
+          "Web Developer",
+          "Brand Identity Designer",
+          "UI/UX Designer",
+          "Mobile App Developer",
         ],
         loop: true,
-        delaySpeed: 2000,
+        delaySpeed: 900,
       });
     
       //   //change some words automatically
@@ -46,29 +46,32 @@ export default function Hero() {
       
       */}
   return (
-    <div className="flex flex-row w-full h-full items-center justify-between p-5 mt-32">
-        <div className="mr-90 w-1/2 h-full ">
-          <h2 className="text-7xl font-bold mb-2">Hi, I'm Mr. Lota</h2>
+    <header className=" relative flex flex-col w-screen  h-screen items-center justify-between px-16 top-36 snap-center md:flex-row">
+        <div className="mr-90 w-screen h-screen ">
+          <h2 className=" font-bold text-gray-600 mt-11 uppercase mb-2">hello, my name is</h2>
+          <h2 className="text-9xl text-primary py-7 font-extrabold font mb-2">Mr. Lota</h2>
           <p className="text-2xl text-gray-500">
-            Expert in <b className='text-primary tracking-[2px]'>{text}
+            I'm a <b className='text-primary tracking-[2px]'>{text}
             <Cursor cursorColor="#F49B43" cursorBlinking/>
             </b>
           </p>
-          <p className="mt-10 text-4xl text-black ">
-            I help <b className="text-primary">startups</b> {""}
-            by designing & developing outstanding web and mobile products.
+          <p className="leading-snug mt-10 text-4xl text-black ">
+            Helping <b className="text-primary">startups</b> {""}
+            by designing, developing & maintaining outstanding web and mobile products.
           </p>
           <div className="mt-5">
             {" "}
-            <Button />
+            <button className=" bg-secondary mr-3 px-6 py-3 rounded-full font-semibold hover:bg-primary-200 hover:text-white text-primary">
+    <b >Download CV</b>
+  </button>
           </div>
         </div>
-        <div className="justify-center items-start w-1/2 p-5 ml-10">
+        <div className="justify-center items-center w-full px-5 mb-36 ml-10">
           <Image 
             src={lota}  
             className="relative object-cover mx-auto h-80 w-80  rounded-full"
           />
         </div>
-      </div>
+      </header>
   )
 }
